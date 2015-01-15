@@ -2,7 +2,7 @@
 
 session_start();
 
- 
+require("requireDB.php");
 
 
 if (isset($_GET['tanca']))//si en un altre script m´han passat sa variable tanca elimina la sessio
@@ -15,73 +15,95 @@ session_destroy();
 }
 
 
-
- if ($_SERVER['REQUEST_METHOD'] == 'POST')
- {
-   if ($_POST['user']=="admin")
-   { 
-     if ($_POST['pass']=="1234")
-     {
+//
+//if ($_SERVER['REQUEST_METHOD'] == 'POST')
+ //{
+  // if ($_POST['user']=="admin")
+  // { 
+  //   if ($_POST['pass']=="1234")
+  //   {
 	 
-	 $_SESSION['login']  = 'true'; //login es sa variable que heu d´emplear per comprovar que s´ha iniciat sessio
+	// $_SESSION['login']  = 'true'; //login es sa variable que heu d´emplear per comprovar que s´ha iniciat sessio
 	// print($_SESSION['login']); 
 
-  header('Location:list.php');//AQUI S´HA DE POSAR EL NOM DE LA PRIMERA PAGINA vostra
+  //header('Location:list.php');//AQUI S´HA DE POSAR EL NOM DE LA PRIMERA PAGINA vostra
+ //  exit;
+  //   }
+  //   else
+	// {
+	//  $error2="password incorrecte";
+	// }
+  // }
+  // else
+  // { 
+     
+	//$error="usuari incorrecte";
+	
+  // }
+ 
+  
+//}
+//
+
+
+
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+ {
+	 if (isset($_POST['user']) && isset($_POST['pass']))
+{
+$u=$_POST['user'];
+$c=$_POST['pass'];
+
+$usuario="select user from `users` where user='$u'";
+$contraseña="select password from `users` where password='$c'";
+$r=@mysqli_query($dbc,$usuario);
+$numr=mysqli_num_rows($r);
+$s=@mysqli_query($dbc,$contraseña);
+$nums=mysqli_num_rows($s);
+
+}
+   if ($numr>0)
+   { 
+     if ($nums>0)
+    {
+	 
+	 $_SESSION['login']  = 'true'; //login es sa variable que heu d´emplear per comprovar que s´ha iniciat sessio
+	 print($_SESSION['login']); 
+
+ header('Location:list.php');//AQUI S´HA DE POSAR EL NOM DE LA PRIMERA PAGINA vostra
    exit;
      }
      else
 	 {
-	  $error2="wrong password  ";
+	  $error2="password incorrecte";
 	 }
    }
    else
-   { 
+  { 
      
-	$error="wrong user";
+	$error="usuari incorrecte";
 	
    }
  
   
 }
-  
+
+
+
+
+
+
+
  
 
 ?>
 <html>
 <head><title>LOGIN</title></head>
-<style>
-#box {
-	border: solid;
-	width: 420px;
-	height: 175px;
-	padding-left: 20px;
-	background-color: yellow;
-	margin: 100px auto;
-}
-.row {
-	width: 400px;
-	height: 30px;
-	}
-	.row-1 {
-	width: 100px;
-	height: 30px;
-	float: left;
-	}
-	.row-2 {
-	width: 150px;
-	height: 30px;
-	float: left;
-	}
-	.row-3 {
-	width: 150px;
-	height: 30px;
-	float: left;
-	}
-	.row-b {
-	float: right;
-	margin-right: 20px;
-	}
-</style>
+ <link rel="stylesheet" type="text/css" href="stylelogin.css" />
+ <link rel="stylesheet" type="text/css" href="style.css" />
+ 
 <body>
 <div id=box>
 <h3>Login</h3>
@@ -109,8 +131,11 @@ session_destroy();
    }
    ?>
    </div>
-<div class=row><div class=row-b><input type="submit" value="Enviar" /></div>
-<div class="row-b"><button type="reset" value="Reset">Borrar</button></div></div>
+<!--<div class=row><div class=row-b><input type="submit" value="Enviar" /></div>
+<div class="row-b"><input type="reset" value="Reset" /></div></div>-->
+<div><input type="submit" value="Enviar" /></div>
+<div><input type="reset" value="Reset" /></div>
+
 </form>
  </div>
 </body>

@@ -1,0 +1,33 @@
+
+body{background-color:#800040;}
+#box {
+	/*border: solid;*/
+	width: 420px;
+	height: 175px;
+	padding-left: 20px;
+	background-color: white;
+	margin: 100px auto;
+}
+.row {
+	width: 400px;
+	height: 30px;
+	}
+	.row-1 {
+	width: 100px;
+	height: 30px;
+	float: left;
+	}
+	.row-2 {
+	width: 150px;
+	height: 30px;
+	float: left;
+	}
+	.row-3 {
+	width: 150px;
+	height: 30px;
+	float: left;
+	}
+	.row-b {
+	float: right;
+	margin-right: 20px;
+	}
