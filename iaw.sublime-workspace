@@ -1,0 +1,531 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"line",
+				"lineOutput"
+			],
+			[
+				"reverse",
+				"reverseOutput"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"pus",
+				"array_push"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"text-tr",
+				"text-decoration"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"chec",
+				"checked"
+			],
+			[
+				"t",
+				"getTime"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"html",
+				"htmlentities"
+			],
+			[
+				"border",
+				"border-top-width"
+			],
+			[
+				"onm",
+				"onmouseout	Attr"
+			],
+			[
+				"onmouese",
+				"onmouseover	Attr"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"onke",
+				"onkeypress	Attr"
+			],
+			[
+				"i",
+				"innerHTML"
+			],
+			[
+				"a",
+				"action	Attr"
+			],
+			[
+				"for",
+				"form	Tag"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"borde",
+				"border-color"
+			],
+			[
+				"border-s",
+				"border-style"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"onc",
+				"onclick	Attr"
+			],
+			[
+				"strto",
+				"strtoupper"
+			],
+			[
+				"filter",
+				"filter_var"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"p",
+				"php	<?php … ?>"
+			],
+			[
+				"is_n",
+				"is_numeric"
+			],
+			[
+				"is",
+				"is_int"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 380.0,
+		"selected_items":
+		[
+			[
+				"toggle",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/dav84_000/Desktop/Nueva carpeta (3)"
+	],
+	"file_history":
+	[
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/requireHeader.php",
+		"/C/Users/dav84_000/Desktop/DemoCalculadora.html",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/exam1.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/style.css",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/login.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/logout.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/log/login.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/requireFunctions.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/exam2.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/exam1Pdf.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/requireFooter.php",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch12/script_12_09/loggedin.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/includeHeader.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/includeFooter.php",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch12/script_12_07/header.html",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch12/script_12_10/header.html",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch12/script_12_05/login.php",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch12/script_12_04/loggedin.php",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch12/script_12_03/login.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/masaCorporal.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/includeFunctions.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/previousExams/exam1.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/sendDataForm.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/index.php",
+		"/D/Dropbox/1º ASIX/GBD/ASP.NET/BaseDatosSales/Sales/Sales.sql",
+		"/D/Dropbox/2º ASIX/ASOP/Ejercicios Windows/Ejercicios 12, 13, 14/Ejercicio 12 (crear 2 menus con funciones todo en un solo fichero bat)/MENU PRINCIPAL.bat",
+		"/D/Dropbox/1º ASIX/GBD/Comandos SQLSERVER/Comandos 1.sql",
+		"/D/Dropbox/2º ASIX/SGBD/Ejercicios/Trigger & procedure (crear tablas, procedure y un trigger)/Ejercicio trigger & procedure.sql",
+		"/D/Dropbox/2º ASIX/SXIN/Ejercicios/Ejercicio WebStore/WebStore.sql",
+		"/D/Dropbox/2º ASIX/SXIN/Ejercicios/Ejercicio WebService/WebService.sql",
+		"/D/Dropbox/1º ASIX/GBD/ASP.NET/DBGestiondeClientes/Comandos Sql Gestion de Clientes.sql",
+		"/D/Dropbox/2º ASIX/SXIN/Ejercicios/Ejercicio WebService/WebClient/Form1.cs",
+		"/D/Dropbox/1º ASIX/GBD/Comandos SQLSERVER/RESUMEN COMANDOS/CREATE TABLE (apuntes).docx",
+		"/C/Users/dav84_000/Desktop/gestpath.sh",
+		"/C/Users/dav84_000/Desktop/Nueva carpeta/gestpath.sh",
+		"/D/Dropbox/2º ASIX/EXT7/Practica 10/palindromos.html",
+		"/D/Dropbox/2º ASIX/EXT7/Practica 10/script.js",
+		"/D/Dropbox/2º ASIX/EXT7/Practica 10/style.css",
+		"/D/Dropbox/2º ASIX/IAW/NFS/wifiRegister/register.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/wifiRegister/index.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/wifiRegister/style.css",
+		"/D/Dropbox/2º ASIX/SXIN/Ejercicios/Ejercicio WebStore/WebStore/WebStore/Store.asmx",
+		"/D/Dropbox/2º ASIX/SXIN/Ejercicios/Ejercicio WebStore/WebStore/WebStore/Store.asmx.cs",
+		"/D/Dropbox/2º ASIX/SXIN/Ejercicios/Ejercicio WebStore/WindowsFormsApplication3/WindowsFormsApplication3/Form1.cs",
+		"/D/Dropbox/2º ASIX/SXIN/Ejercicios/Ejercicio WebStore/WindowsFormsApplication3/WindowsFormsApplication3/Form1.resx",
+		"/D/Dropbox/2º ASIX/SXIN/Ejercicios/Ejercicio WebStore/WebStore/WebStore/WebForm1.aspx",
+		"/D/Dropbox/2º ASIX/IAW/NFS/checkDni.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/wifiRegister/includeFunctions.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/wifiRegister/includeFooter.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/wifiRegister/includeHeader.php",
+		"/D/Dropbox/2º ASIX/ASOP/Ejercicios Linux/Ejercicios PATH 1, 2, 3, 4, 5, 6, 7/fpath.sh",
+		"/D/Dropbox/2º ASIX/ASOP/Ejercicios Linux/Ejercicios PATH 1, 2, 3, 4, 5, 6, 7/dpath.sh",
+		"/D/Dropbox/2º ASIX/ASOP/Ejercicios Linux/Ejercicios PATH 1, 2, 3, 4, 5, 6, 7/ispath.sh",
+		"/D/Dropbox/2º ASIX/ASOP/Ejercicios Linux/Ejercicios PATH 1, 2, 3, 4, 5, 6, 7/indpath.sh",
+		"/D/Dropbox/2º ASIX/ASOP/Ejercicios Linux/Ejercicios PATH 1, 2, 3, 4, 5, 6, 7/contpath.sh",
+		"/D/Dropbox/2º ASIX/IAW/NFS/wifiRegister/mysqli_connect.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/wifiRegister/view_users.php",
+		"/D/Dropbox/2º ASIX/ASOP/Ejercicios Linux/Ejercicios 9, 10, 11/Ejercicio 9 (mostrar un numero decimal en binario)/dtb.sh",
+		"/D/Dropbox/2º ASIX/ASOP/Ejercicios Linux/Ejercicios 9, 10, 11/Ejercicio 11 (mostrar un numero binario en decimal)/btd.sh",
+		"/D/Dropbox/2º ASIX/SXIN/VisualStudio/Calculadora/Calculadora/Form1.cs",
+		"/D/Dropbox/2º ASIX/IAW/NFS/pimpMyShoes/form.html",
+		"/D/Dropbox/2º ASIX/IAW/NFS/selectColor.php",
+		"/C/Users/dav84_000/Desktop/view_users.php",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch09/index.php",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch09/register.php",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch09/password.php",
+		"/C/Users/dav84_000/Desktop/WebStore/WebStore/Web.config",
+		"/D/Dropbox/1º ASIX/GBD/ASP.NET/DBGestiondeClientes/DBGestionDeClientes/DBGestionDeClientes/Web.config",
+		"/D/Dropbox/2º ASIX/IAW/NFS/triangles/halfTri.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/ecuacion2G/ecuacion2G.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/selectColor/selectColor.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/explode/letraDniExplode.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/arrays/tablaArrays.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/arrays/login.php",
+		"/C/Users/dav84_000/Desktop/tablas george.html",
+		"/D/Dropbox/2º ASIX/IAW/NFS/numbers/numbers.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/stringFunctions/stringFunctions.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/predefinedVariables/predefinedVariables.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/basicPhp/printEcho.php",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch01/predefined.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/css/blue.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/css/header.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/basicPhp/comments.php",
+		"/D/Dropbox/2º ASIX/IAW/NFS/basicPHP/first.php",
+		"/C/Users/dav84_000/Desktop/Nueva carpeta/style.css",
+		"/C/Users/dav84_000/Desktop/Nueva carpeta/test.html",
+		"/C/Users/dav84_000/Desktop/Nueva carpeta/script.js",
+		"/D/Dropbox/2º ASIX/EXT7/Practica 8/script.js",
+		"/D/Dropbox/2º ASIX/EXT7/Practica 6/FormValJs.js",
+		"/D/Dropbox/2º ASIX/EXT7/Practica 6/formValidation.html",
+		"/C/Users/dav84_000/Desktop/Nueva carpeta/checkboxGame.html",
+		"/C/Users/dav84_000/Desktop/index.htm",
+		"/D/Dropbox/2º ASIX/ASOP/Ejercicios Linux/Ejercicios 9, 10, 11/Ejercicio 10 (mostrar un numero decimal en binario añadiendo ceros)/dtb2.sh",
+		"/D/Dropbox/2º ASIX/ASOP/Ejercicios Linux/Ejercicios 5, 6, 7, 8/Ejercicio 7 (traducir palabra de permisos)/ptb.sh",
+		"/D/Dropbox/1º ASIX/LLMA/Ejercicios For 4/4.5 For (crear rombo con asteriscos en base a un numero introducido).html",
+		"/C/Users/dav84_000/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/dav84_000/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/dav84_000/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/D/Dropbox/2º ASIX/EXT7/Ejercicio 7/script.js",
+		"/D/Dropbox/2º ASIX/EXT7/Ejercicio 7/galeria.html",
+		"/C/inetpub/wwwroot/iaw/forms/masaCorporal.php",
+		"/C/inetpub/wwwroot/iaw/cookies/create.php",
+		"/D/Dropbox/2º ASIX/EXT7/Ejercicio 7/style.css",
+		"/C/Users/dav84_000/Desktop/Nueva carpeta/checkboxRun.html",
+		"/C/Users/dav84_000/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/dav84_000/Desktop/PHPguide.html",
+		"/C/Users/dav84_000/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/Default (Windows).sublime-keymap",
+		"/C/Users/dav84_000/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/dav84_000/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/dav84_000/Desktop/Nueva carpeta/galeria.html",
+		"/D/Dropbox/2º ASIX/IAW/Guide/PHPguide.html",
+		"/D/Dropbox/2º ASIX/IAW/PHPguide.html",
+		"/C/inetpub/wwwroot/iaw/ecuacion2G/resEcuacion.php",
+		"/C/inetpub/wwwroot/iaw/numbers/numbers.php",
+		"/C/inetpub/wwwroot/iaw/exams/examA1.php",
+		"/C/inetpub/wwwroot/iaw/examen/CabotDavid2.php",
+		"/C/inetpub/wwwroot/iaw/examen/CabotDavid1.php",
+		"/C/inetpub/wwwroot/iaw/forms/checkDni.php",
+		"/C/inetpub/wwwroot/iaw/exams/cabot-david-748-2.php",
+		"/C/Users/dav84_000/Desktop/index.php",
+		"/C/inetpub/wwwroot/iaw/examen/ejercicio1.php",
+		"/C/inetpub/wwwroot/iaw/css/style.css",
+		"/C/inetpub/wwwroot/iaw/css/header.php",
+		"/C/inetpub/wwwroot/iaw/css/yellow.php",
+		"/C/inetpub/wwwroot/iaw/css/blue.php",
+		"/C/inetpub/wwwroot/iaw/css/green.php",
+		"/C/inetpub/wwwroot/iaw/css/red.php",
+		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch03/includes/footer.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"val",
+			"res",
+			"insert",
+			"falladas",
+			"acertadas",
+			"ul",
+			"new Array",
+			")",
+			"\\\"",
+			"'",
+			"(",
+			"'",
+			",",
+			"['",
+			"(",
+			"write",
+			"columna",
+			"espacios",
+			"fila",
+			"dificultad",
+			"div",
+			">",
+			"<",
+			"<!",
+			"<",
+			"reindent",
+			"ul",
+			"res",
+			"intro",
+			"labelEstado",
+			"class",
+			"nombre",
+			"Azul",
+			"Verde",
+			"Agnóstico",
+			"Hinduismo",
+			"religion",
+			"Islamismo",
+			"checkbox",
+			"=\"\"",
+			" <"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"]",
+			"'",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "iaw.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 192.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 1
+	}
+}

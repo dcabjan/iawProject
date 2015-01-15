@@ -1,0 +1,152 @@
+/*all*/
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*body*/
+body {
+	color: #000000;
+	font-family: trebuchet ms, Helvetica, sans-serif;
+	background-color: #800040;
+}
+#container {
+	position: absolute;
+	background-color: #FFFFFF;
+	width: 800px;
+	padding: 0 auto;
+	margin: 30px;
+	top: 0px;
+	bottom: 0px;
+}
+
+/*header*/
+#header {
+	height: 50px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	width: 90%;
+	padding: 10px;
+}
+#header h1 {
+	color: #000000;
+	font-size: 250%;
+	font-family: trebuchet ms, Helvetica, sans-serif;
+	letter-spacing: -3px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/*navigation panel*/
+#navigation {
+	margin: 0 auto;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #800040;
+	width: 90%;
+	height: 30px;
+	list-style: none;
+	text-align: center;
+}
+#panel {
+	width: 600px;
+	margin: 0 auto;
+}
+#navigation li {
+	float: left;
+	width: 188px;
+	margin: 4px;
+	list-style: none;
+	border-radius: 10px;		
+	background-color: #800040;
+}
+#navigation a {
+	color: #FFFFFF;
+	display: block;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 10px;		
+	background-color: #800040;
+}
+#navigation a:hover {
+	background: #000000;
+	color: #800040;
+}
+
+/*content*/
+#content {
+	width: 90%;
+	margin: 0 auto;
+}
+#display p {
+	padding: 0px 0px 5px 0px;
+}
+input[type="text"] {
+	border-style: solid;
+	border-color: #000000;
+	border-width: 1px;
+	background-color: #FFFFFF;
+	border-radius: 6px;
+}
+select {
+	border-style: solid;
+	border-color: #000000;
+	border-width: 1px;
+	background-color: #FFFFFF;
+	border-radius: 6px;
+}
+#gestForm {
+	padding: 15px 0px 15px 0px;
+}
+#gestSubmenu {
+	margin: 0 auto;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	height: 30px;
+	list-style: none;
+	text-align: center;
+}
+input[type="submit"] {
+	color: #FFFFFF;
+	background-color: #800040;
+	display: inline;
+	line-height: 20px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 6px;
+	width: 150px;
+	margin-top: 15px;
+
+}
+input[type="submit"]:hover {
+	color: #800040;
+	background-color: #000000;
+}
+#list {
+	margin: 0 auto;
+	margin-top: 10px;
+}
+#emailTable, #emailTable td {
+	text-align: center; 
+	border: 1px solid #800040;
+}
+
+/* bottom */
+#bottom {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+}
+
+/* footer */
+#footer {
+	border-top: 1px solid #800040;
+	height: 20px;
+	padding: 5px;
+	margin: 0 auto;
+	text-align: center;
+	width: 90%;
+	font-size: 0.6em;
+}
