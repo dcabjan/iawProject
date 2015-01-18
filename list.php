@@ -10,9 +10,11 @@ $r=@mysqli_query($dbc,$q);
 <form action="" method="POST">
 <select name="event"> <!--We show the list of events in a dropdown list-->
 <option>All</option> <!--By default, 'ALL' will appear-->
-	<?php while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
+<option>Actives</option>
+<option>Finished</option>
+	<?php/* while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
 			echo "<option>".$row['eventDate']."</option><br />";
-			} ?>
+			} */?>
 		</select>
 <input type="submit" name="submit" value="Filter" />
 <br /><br /><br />
@@ -23,14 +25,17 @@ $r=@mysqli_query($dbc,$q);
 		if ($_POST['submit']=="Filter") {
 			if ($_POST['event']=="All") { //If  'ALL' is selected in filter, we make a SELECT * and we show all events
 				$q="SELECT * FROM events ORDER BY eventDate";
-			} else { //If not, we only show the event that the user has chosen
-				$q="SELECT * FROM events WHERE eventDate='".$_POST['event']."'";
-			} 
+			} elseif ($_POST['event']=="Actives") { //If not, we only show the event that the user has chosen
+					//$q="SELECT * FROM events WHERE eventDate>'".$_POST['event']."'";
+					$q="SELECT * FROM events WHERE eventDate>'".date('Y/m/d')."' ORDER BY eventDate"; //Active events will be shown
+				} elseif ($_POST['event']=="Finished") {
+					$q="SELECT * FROM events WHERE eventDate<'".date('Y/m/d')."' ORDER BY eventDate"; //Finished events will be shown
+					}
 			
 			$r=@mysqli_query($dbc,$q); //We execute the query
 			$num=mysqli_num_rows($r); //We count the number of returned fields
 			
-			echo "<p>You are filtering by date=\"".$_POST['event']."\"</p>"; //We show an alert to let know the user what filter has used
+			echo "<p>You are filtering \"".$_POST['event']."\"</p>"; //We show an alert to let know the user what filter has used
 
 			if ($num>0) { //If the number of returned rows is more than 0, we found matches, then we show them in a table
 				echo "<form action=\"\" method=\"POST\">";
