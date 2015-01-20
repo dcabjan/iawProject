@@ -1,4 +1,4 @@
-<!-- <!-- File: login.php -->
+<!-- File: login.php -->
 <?php 
 session_start();
 require("requireDB.php");

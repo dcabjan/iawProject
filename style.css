@@ -4,12 +4,13 @@
 	margin: 0;
 	padding: 0;
 }
+body {
+	color: #000000;
+	font-family: trebuchet ms, Helvetica, sans-serif;
+	background-color: #800040;
+}
 
 /*login.php*/
-body {
-	background-color:#800040;
-	font-family: trebuchet ms, Helvetica, sans-serif;
-}
 #box {
 	width: 420px;
 	height: 250px;
@@ -43,24 +44,15 @@ body {
 	width: 300px;
 }
 
-
-/*body*/
-body {
-	color: #000000;
-	font-family: trebuchet ms, Helvetica, sans-serif;
-	background-color: #800040;
-}
+/*requireHeader.php*/
 #container {
 	position: absolute;
 	background-color: #FFFFFF;
-	width: 800px;
+	width: 900px;
+	height: 700px;
 	padding: 0 auto;
 	margin: 30px;
-	top: 0px;
-	bottom: 0px;
 }
-
-/*header*/
 #header {
 	height: 50px;
 	margin: 0 auto;
@@ -69,15 +61,27 @@ body {
 	padding: 10px;
 }
 #header h1 {
-	color: #000000;
 	font-size: 250%;
-	font-family: trebuchet ms, Helvetica, sans-serif;
 	letter-spacing: -3px;
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
+#header a {
+	color: #FF0000;
+	float: right;
+	text-decoration: none;
+	background-color: #000000;
+	border-radius: 10px;
+	float: right;
+	font-size: 0.8em;
+	padding: 4px;
+	margin-right: -35px;
 
-/*navigation panel*/
+}
+#header a:hover {
+	background: #FF0000;
+	color: #000000;
+}
 #navigation {
 	margin: 0 auto;
 	margin-bottom: 15px;
@@ -89,7 +93,7 @@ body {
 	text-align: center;
 }
 #panel {
-	width: 800px;
+	width: 900px;
 	margin: 0 auto;
 }
 #navigation li {
@@ -97,8 +101,6 @@ body {
 	width: 188px;
 	margin: 4px;
 	list-style: none;
-	borwder-radius: 10px;		
-	backwground-color: #800040;
 }
 #navigation a {
 	color: #FFFFFF;
@@ -106,6 +108,8 @@ body {
 	line-height: 30px;
 	text-align: center;
 	text-decoration: none;
+	background-color: #800040;	
+	border-radius: 10px;
 }
 #navigation a:hover {
 	background: #000000;
