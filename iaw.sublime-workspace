@@ -233,10 +233,14 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/dav84_000/Desktop/Nueva carpeta (3)"
+		"/C/Users/dav84_000/Desktop/iawProject"
 	],
 	"file_history":
 	[
+		"/C/Users/dav84_000/Desktop/iawProject/requireHeader.php",
+		"/C/Users/dav84_000/Desktop/iawProject/gest.php",
+		"/C/Users/dav84_000/Desktop/iawProject/requireFunctions.php",
+		"/C/Users/dav84_000/Desktop/iawProject/style.css",
 		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/requireHeader.php",
 		"/C/Users/dav84_000/Desktop/DemoCalculadora.html",
 		"/D/Dropbox/2º ASIX/IAW/NFS/iawProject/exam1.php",
@@ -360,11 +364,7 @@
 		"/C/inetpub/wwwroot/iaw/examen/ejercicio1.php",
 		"/C/inetpub/wwwroot/iaw/css/style.css",
 		"/C/inetpub/wwwroot/iaw/css/header.php",
-		"/C/inetpub/wwwroot/iaw/css/yellow.php",
-		"/C/inetpub/wwwroot/iaw/css/blue.php",
-		"/C/inetpub/wwwroot/iaw/css/green.php",
-		"/C/inetpub/wwwroot/iaw/css/red.php",
-		"/D/Dropbox/2º ASIX/IAW/Libros/phpmysql4_scripts/ch03/includes/footer.html"
+		"/C/inetpub/wwwroot/iaw/css/yellow.php"
 	],
 	"find":
 	{
@@ -447,6 +447,11 @@
 			"sheets":
 			[
 			]
+		},
+		{
+			"sheets":
+			[
+			]
 		}
 	],
 	"incremental_find":
@@ -466,11 +471,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.691652470187,
 			1.0
 		],
 		"rows":
