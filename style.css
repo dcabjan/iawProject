@@ -50,7 +50,7 @@ body {
 	text-align: center;
 }
 #panel {
-	width: 600px;
+	width: 800px;
 	margin: 0 auto;
 }
 #navigation li {
@@ -58,8 +58,8 @@ body {
 	width: 188px;
 	margin: 4px;
 	list-style: none;
-	border-radius: 10px;		
-	background-color: #800040;
+	borwder-radius: 10px;		
+	backwground-color: #800040;
 }
 #navigation a {
 	color: #FFFFFF;
@@ -67,12 +67,11 @@ body {
 	line-height: 30px;
 	text-align: center;
 	text-decoration: none;
-	border-radius: 10px;		
-	background-color: #800040;
 }
 #navigation a:hover {
 	background: #000000;
 	color: #800040;
+	border-radius: 10px;
 }
 
 /*content*/
@@ -90,7 +89,7 @@ input[type="text"] {
 	background-color: #FFFFFF;
 	border-radius: 6px;
 }
-select {
+textarea[name="message"] {
 	border-style: solid;
 	border-color: #000000;
 	border-width: 1px;
@@ -118,7 +117,14 @@ input[type="submit"], input[type="reset"] {
 	border-radius: 6px;
 	width: 150px;
 	margin-top: 15px;
+}
 
+select{
+	border-style: solid;
+	border-color: #000000;
+	border-width: 1px;
+	background-color: #FFFFFF;
+	border-radius: 6px;
 }
 input[type="submit"]:hover, input[type="reset"]:hover  {
 	color: #800040;
@@ -129,8 +135,12 @@ input[type="submit"]:hover, input[type="reset"]:hover  {
 	margin-top: 10px;
 }
 #emailTable, #emailTable td {
+}
+
+#emailTable {
 	text-align: center; 
 	border: 1px solid #800040;
+	padding-top: 10px;
 }
 
 /* bottom */

@@ -23,6 +23,8 @@ session_start();
 					<li><a href="list.php">EVENT STATISTICS</a></li>
 					<li><a href="send.php">EVENT SENDER</a></li>
 					<li><a href="insert.php">MANAGE LISTS</a></li>
+					<li><a href="create.php">CREATE EVENT</a></li>
+					<li><a href="logout.php">LOGOUT</a></li>
 				</ul>
 			</div>
 		</div>
