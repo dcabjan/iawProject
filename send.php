@@ -1,4 +1,5 @@
 <?php
+$pageTitle = 'Event Sender';
 //Require database connection and header
 require('./requireHeader.php');
 require('./requireDB.php');

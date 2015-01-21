@@ -21,10 +21,10 @@ session_start();
 		<div id="navigation">
 			<div id="panel">
 				<ul>
-					<li><a href="list.php">EVENT STATISTICS</a></li>
-					<li><a href="send.php">EVENT SENDER</a></li>
-					<li><a href="insert.php">MANAGE LISTS</a></li>
-					<li><a href="create.php">CREATE EVENT</a></li>
+					<li><a href="list.php" class="<?php if($pageTitle == 'Event Statistics'){ echo 'navon';}else{echo 'navoff';} ?>" >EVENT STATISTICS</a></li>
+					<li><a href="send.php" class="<?php if($pageTitle == 'Event Sender'){ echo 'navon';}else{echo 'navoff';} ?>" >EVENT SENDER</a></li>
+					<li><a href="insert.php" class="<?php if($pageTitle == 'Manage Lists'){ echo 'navon';}else{echo 'navoff';} ?>" >MANAGE LISTS</a></li>
+					<li><a href="create.php" class="<?php if($pageTitle == 'Create Event'){ echo 'navon';}else{echo 'navoff';} ?>" >CREATE EVENT</a></li>
 				</ul>
 			</div>
 		</div>
