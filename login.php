@@ -55,7 +55,7 @@ else
       <div class="row">Password: <input type="password" name="pass" required />
       </div>  
 
-      <div>
+      <div class="send">
         <input type="submit" name="submit" value="Enviar" />
         <input type="reset" name="reset" value="Reset" />
       </div>
