@@ -6,9 +6,9 @@ $back = '<input type="button" id="btnBack" value="Go Back" onClick="window.histo
 
 <div id="actions">
 	<div id="board">
-		<a href='insert.php'>INSERT</a>
-		<a href='update.php'>UPDATE</a>
-		<a href='delete.php'>DELETE</a>
+		<input type="button" value="INSERT" class="<?php if($subPage == 'insert'){ echo 'navon';}else{echo 'navoff';} ?>" onclick="location.href='insert.php'">
+		<input type="button" value="UPDATE" class="<?php if($subPage == 'update'){ echo 'navon';}else{echo 'navoff';} ?>" onclick="location.href='update.php'">
+		<input type="button" value="DELETE" class="<?php if($subPage == 'delete'){ echo 'navon';}else{echo 'navoff';} ?>" onclick="location.href='delete.php'">
 	</div>
 </div>
 

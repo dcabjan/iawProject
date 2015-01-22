@@ -1,6 +1,7 @@
 <!-- File: delete.php -->
 <?php
 $pageTitle = 'Manage Lists';
+$subPage = 'delete';
 require('./requireHeader.php');
 require('./requireDB.php');
 require('./requireFunctions.php');

@@ -1,6 +1,7 @@
 <!-- File: update.php -->
 <?php
 $pageTitle = 'Manage Lists';
+$subPage = 'update';
 require('./requireHeader.php');
 require('./requireDB.php');
 require('./requireFunctions.php');

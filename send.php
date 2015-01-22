@@ -134,7 +134,7 @@ else{//Else, show the form
 		<br />
 		<div class="send">
 			<input type="submit" name="submit" value="Send" />
-			<input type="button" value="Reset all" onclick="location.href='send.php'">
+			<input type="button" class="navoff" value="Reset all" onclick="location.href='send.php'">
 		</div>
 	</form>
 </div>

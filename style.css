@@ -101,7 +101,7 @@ body {
 }
 #navigation li {
 	float: left;
-	width: 188px;
+	width: 194px;
 	margin: 4px;
 	list-style: none;
 }
@@ -183,7 +183,6 @@ textarea[name="message"] {
 }
 #divSend2 {
 	float: left;
-	background-color: rgba(0,0,0,0.2);
 }
 textarea {
 	width: 500px;
@@ -194,8 +193,14 @@ textarea {
 	width: 500px;
 }
 
+/*requireGest.php*/
+#board {
+	text-align: center;
+}
 #gestForm {
-	padding: 15px 0px 15px 0px;
+	padding: 15px 15px 15px 15px;
+	background-color: rgba(0,0,0,0.2);
+	height: 150px;
 }
 #gestSubmenu {
 	margin: 0 auto;
@@ -205,7 +210,15 @@ textarea {
 	list-style: none;
 	text-align: center;
 }
-input[type="submit"], input[type="reset"], input[type="button"] {
+input[type="button"]{
+	display: inline;
+	line-height: 20px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 6px;
+	width: 150px;
+}
+input[type="submit"], input[type="reset"] {
 	color: #FFFFFF;
 	background-color: #800040;
 	display: inline;
@@ -223,7 +236,7 @@ select{
 	background-color: #FFFFFF;
 	border-radius: 6px;
 }
-input[type="submit"]:hover, input[type="reset"]:hover  {
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
 	color: #800040;
 	background-color: #000000;
 }

@@ -1,6 +1,7 @@
 <!-- File: insert.php -->
 <?php
 $pageTitle = 'Manage Lists';
+$subPage = 'insert';
 require('./requireHeader.php');
 require('./requireDB.php');
 require('./requireFunctions.php');
@@ -93,9 +94,9 @@ else{
 			?>
 
 			<!-- submenu with the action buttons -->
-			<div id="gestSubmenu">
-				<input type="submit" value="GO" name="submit">
-				<input type="reset" value="CLEAR" name="reset">
+			<div class="send" id="gestSubmenu">
+				<input type="submit" value="Go" name="submit">
+				<input type="reset" value="Clear" name="reset">
 			</div>
 		</form>
 	</div>
