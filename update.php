@@ -66,6 +66,14 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && ($_POST['submit'] == "GO")){
 			else{
 				$scode = $select['studentCode'];
 			}
+			
+			#when update, if user don't update course, get it from db
+			if (empty($course)) {
+				$q="SELECT course FROM emailList WHERE email=\"".$email."\"";
+				$r=@mysqli_query($dbc,$q);
+				$row=mysqli_fetch_array($r,MYSQLI_ASSOC);
+				$course = $row['course'];
+			}
 
 			switch ($error){
 				case 0:
@@ -120,6 +128,7 @@ else{
 			<!-- drop down list for the courses by taking the information from the database -->
 			<?php
 			echo 'Course: <select name="course" value="">Course</option>';
+			echo "<option value=\"\" selected=\"selected\" disabled>Select a course...</option>"; 
 			foreach ($rCourse as $row){
 				echo "<option value='" . $row[courseName] . "'>" . $row[courseName] . "</option>"; 
 			}

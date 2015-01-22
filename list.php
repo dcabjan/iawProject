@@ -50,7 +50,8 @@ if ($_SERVER['REQUEST_METHOD']=="POST"){
 		echo '<table id="emailTable">';
 		echo "<tr><th>EVENT NAME</th><th>EVENT DATE</th><th>YES</th><th>NO</th><th>DIDN'T ANSWER</th></tr>";
 		while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
-			echo "<tr><td>".$row['eventName']."</td><td>".$row['eventDate']."</td><td>".$row['answerYes']."</td><td>".$row['answerNo']."</td><td>".$row['answerNa']."</td></tr>";
+			$date=strtotime($row['eventDate']);
+			echo "<tr><td>".$row['eventName']."</td><td>".date('d/m/Y', $date)."</td><td>".$row['answerYes']."</td><td>".$row['answerNo']."</td><td>".$row['answerNa']."</td></tr>";
 		}
 		echo "</table>";
 		echo '</div>';
