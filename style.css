@@ -183,6 +183,7 @@ textarea[name="message"] {
 }
 #divSend2 {
 	float: left;
+	background-color: rgba(0,0,0,0.2);
 }
 textarea {
 	width: 500px;
@@ -198,9 +199,13 @@ textarea {
 	text-align: center;
 }
 #gestForm {
-	padding: 15px 15px 15px 15px;
+	padding: 15px 50px 15px 50px;
 	background-color: rgba(0,0,0,0.2);
 	height: 150px;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 350px
 }
 #gestSubmenu {
 	margin: 0 auto;
@@ -228,7 +233,9 @@ input[type="submit"], input[type="reset"] {
 	border-radius: 6px;
 	width: 150px;
 }
-
+.operForm {
+	height: 115px;
+}
 select{
 	border-style: solid;
 	border-color: #000000;
@@ -240,14 +247,26 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
 	color: #800040;
 	background-color: #000000;
 }
-#list {
+
+/*requireEmail.php*/
+#list table tr th, #list table tr td {
+	border: 2px solid #800040;
+	padding: 5px 10px;
+	text-align: center;
+	margin: 50px 0px 10px 0px;
+}
+#userTable {
+	border-collapse: collapse;
+	font-size: 0.8em;
 	margin: 0 auto;
-	margin-top: 10px;
 }
-#emailTable, #emailTable td {
+#list {		
+	padding-top: 10px;
+	padding-bottom: 50px;
 }
-
-
+#gestFilter{
+	padding-left: 50px;
+}
 
 /* requireFooter.php */
 #bottom {

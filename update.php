@@ -120,6 +120,7 @@ else{
 	<div id="gestForm">
 		<!-- show the form -->
 		<form action="" method="POST">
+		<div class="operForm">
 			<p>Email: <input type="text" name="email" /></p>
 			<p>Parent name: <input type="text" name="pname" size="10" /></p>
 			<p>Parent surname: <input type="text" name="psurname" /></p>
@@ -134,11 +135,13 @@ else{
 			}
 			echo "</select>";
 			?>
-
+			
+			</div>
+			
 			<!-- submenu with the action buttons -->
-			<div id="gestSubmenu">
-				<input type="submit" value="GO" name="submit">
-				<input type="reset" value="CLEAR" name="reset">
+			<div id="gestSubmenu" class="send">
+				<input type="submit" value="Go" name="submit">
+				<input type="reset" value="Clear" name="reset">
 			</div>
 		</form>
 	</div>

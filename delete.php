@@ -44,12 +44,14 @@ else{
 	<div id="gestForm">
 		<!-- show the form -->
 		<form action="" method="POST">
+		<div class="operForm">
 			<p>Email: <input type="text" name="email" /></p>
-			
+		</div>
+
 			<!-- submenu with the action buttons -->
-			<div id="gestSubmenu">
-				<input type="submit" value="GO" name="submit">
-				<input type="reset" value="CLEAR" name="reset">
+			<div id="gestSubmenu" class="send">
+				<input type="submit" value="Go" name="submit">
+				<input type="reset" value="Clear" name="reset">
 			</div>
 		</form>
 	</div>
