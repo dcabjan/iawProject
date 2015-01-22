@@ -8,6 +8,7 @@ session_start();
 <head>
 	<meta charset="UTF-8" />
 	<title><?php echo $pageTitle; ?></title>
+	<link rel="icon" type="image/jpg" href="./images/favicon.jpg">
 	<link rel="stylesheet" href="./style.css" type="text/css" />
 </head>
 <body>
