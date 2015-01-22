@@ -11,11 +11,7 @@ if ($_POST['submit']=="Send") {
 	$title=$_POST['title'];
 	$event=$_POST['eventName'];
 	$eventDate=$_POST['eventDate'];
-	$message=$_POST['message'];
-  	$message.="\n\n\n\n\n\nPor favor, confirma si asistirás:\n
-  	<a href=\"http://dcabjan.nfshost.com/iawProject/ans_yes.php?$event?$eventDate\">Asistiré</a>
-  	\n<a href=\"http://dcabjan.nfshost.com/iawProject/ans_no.php?$event?$eventDate\">No asistiré</a>";
-
+	
   	$q="SELECT parentName,email FROM emailList";
   	$r=@mysqli_query($dbc,$q);
 	$numr=mysqli_num_rows($r);
@@ -23,7 +19,12 @@ if ($_POST['submit']=="Send") {
 	if ($numr>0) {
 		$cont=0;
 	  	while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
-	  		$message="Estimado ".$row['parentName'].",\n\n".$message;
+	  		$message=$_POST['message'];
+		  	$message.="\n\n\n\n\n\nPor favor, confirma si asistirás:\n
+		  	<a href=\"http://dcabjan.nfshost.com/iawProject/ans_yes.php?$event?$eventDate\">Asistiré</a>
+		  	\n<a href=\"http://dcabjan.nfshost.com/iawProject/ans_no.php?$event?$eventDate\">No asistiré</a>";
+	  		$saludo="Estimado/a ".$row['parentName'].",\n\n";
+	  		$message=$saludo.$message;
 			mail($row['email'], $title, $message); //We send the email
 			$cont+=1;
 		}
@@ -48,10 +49,10 @@ if ($_POST['submit']=="Send") {
 				if (!($_POST['submitSet']=="Set")) {
 				?>
 
-				Select an event and press "Check"
+				Select an event and press "Check". Then "set" the date:
 				<select name="eventName">
 				<?php
-				$q="SELECT eventName FROM events WHERE eventDate>now()";
+				$q="SELECT DISTINCT(eventName) FROM events WHERE eventDate>now()";
   				$r=@mysqli_query($dbc,$q);
   				if (isset($_POST['eventName']))
 					echo "<option value=\"".$_POST['eventName']."\">".$_POST['eventName']."</option>";	
@@ -88,7 +89,7 @@ if ($_POST['submit']=="Send") {
 			</form>
 
 
-
+		<br />
 		<form action="" method="POST">
 			Subject
 			<br />
