@@ -1,3 +1,4 @@
+<!-- File: requireEmails.php -->
 <!-- drop down list to filter the emails by course -->
 <div id="gestFilter">
 

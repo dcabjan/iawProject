@@ -1,7 +1,7 @@
 <!-- File: requireGest.php -->
 <?php
 /*contains button that loads the previous URL in the history list*/
-$back = '<input type="button" id="btnBack" value="Go Back" onClick="window.history.back()" \">';
+$back = '<input type="button" class="navoff" id="btnBack" value="Go Back" onClick="window.history.back()" \">';
 ?>
 
 <div id="actions">

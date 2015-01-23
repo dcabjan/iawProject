@@ -12,6 +12,9 @@ body {
 .send {
 	padding-top: 15px;
 }
+.submit {
+	margin-top: 15px;
+}
 
 /*login.php*/
 #box {
@@ -195,6 +198,20 @@ textarea {
 }
 
 /*requireGest.php*/
+#btnBack {
+	margin-top: 15px;
+}
+#insError {
+	height: 150px;
+	text-align: center;
+	padding-top: 50px;
+	color: #FF0000;	
+}
+#insError p {
+	text-align: center;
+	
+	font-weight: bolder;
+}
 #board {
 	text-align: center;
 }

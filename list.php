@@ -41,8 +41,8 @@ if ($_SERVER['REQUEST_METHOD']=="POST"){
 		echo '<div id="pFilter"><span>You are filtering "Actives".</span></div>';
 	}
 
-	$r=@mysqli_query($dbc,$q); //We execute the query
-	$num=mysqli_num_rows($r); //We count the number of returned fields
+	$r = @mysqli_query($dbc,$q); //We execute the query
+	$num = mysqli_num_rows($r); //We count the number of returned fields
 
 	if ($num>0){ //If the number of returned rows is more than 0, we found matches, then we show them in a table
 		echo '<div id="listTable">';
