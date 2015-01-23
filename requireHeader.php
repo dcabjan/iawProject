@@ -1,6 +1,11 @@
 <!-- File: requireHeader.php -->
 <?php 
 session_start();
+
+if (!isset($_SESSION['login'])) {
+	
+	header ("Location: http://dcabjan.nfshost.com/iawProject/login.php");
+}
 ?>
 
 <!DOCTYPE html>
