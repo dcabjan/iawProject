@@ -1,13 +1,14 @@
+<!-- File: create.php -->
 <?php
 $pageTitle = 'Create Event';
 //Require database connection and header
 require('./requireHeader.php');
 require('./requireDB.php');
 
-//Function to display a dropdown list to select a date (day/month/year)
+//Function to display a drop down list to select a date (day/month/year)
 function createSelectDate () {
 	$meses=array(1=>"January","February","March","April","May","June","July","August","September","October","November","December");
-?>
+	?>
 	Select event date: <br />
 	<select name="day">
 		<option value="" selected="selected" disabled>-</option>
@@ -19,27 +20,28 @@ function createSelectDate () {
 	</select>
 	
 	<select name="month">
-	<option value="" selected="selected" disabled>-</option>
-	<?php
-	foreach ($meses as $k=>$v) {
-		echo "<option value=\"".$k."\">".$v."</option>";
-	}
-	?>
+		<option value="" selected="selected" disabled>-</option>
+		<?php
+		foreach ($meses as $k=>$v) {
+			echo "<option value=\"".$k."\">".$v."</option>";
+		}
+		?>
 	</select>
 
 	<select name="year">
-	<option value="" selected="selected" disabled>-</option>
-	<?php
+		<option value="" selected="selected" disabled>-</option>
+		<?php
 		echo "<option value=\"".date("Y")."\">".date("Y")."</option>";
 		echo "<option value=\"".date('Y', strtotime('+1 year'))."\">".date('Y', strtotime('+1 year'))."</option>";
-	?>
+		?>
 	</select>
-<?php
+	<?php
 }
 
 
 //If Create button was pressed, we proceed this way to insert a new event
 if ($_POST['submit']=="Create") {
+	if(!empty($_POST['day']) && !empty($_POST['month']) && !empty($_POST['year']) && !empty($_POST['event'])){
 	$title=$_POST['event'];
 	$day=$_POST['day'];
 	$month=$_POST['month'];
@@ -58,7 +60,11 @@ if ($_POST['submit']=="Create") {
 	
 	echo "<br /><br />";
 	echo "<input type=\"button\" value=\"Create more?\" onClick=\"location.href='create.php'\" />";
-	
+	}
+	else{
+		echo 'You must fill in all the fields';
+		echo "<input type=\"button\" value=\"Go back\" onClick=\"location.href='create.php'\" />";
+	}
 
 //If Update button was pressed, we proceed this way to update an existent event
 } elseif ($_POST['submit']=="Update")  {
@@ -93,53 +99,48 @@ if ($_POST['submit']=="Create") {
 	
 
 } else {
-?>
-<table border="1">
-<tr>
-	<!--COMIENZO DE CELDA-->
-<td>
+	?>
+	<div id="createN">
+		<h3>Create an event</h3>
+		<!--Display a form to create a new event-->
 
-	<h3>Create an event</h3>
-	<!--Display a form to create a new event-->
-	
-	<form action="" method="POST">
-		<?php
-		createSelectDate();
-		?>
-		<br /><br />
-
-		Introduce event name: <br /> 
-		
-		<input type="text" name="event" />
-		<input type="submit" name="submit" value="Create" />
-	</form>
-	
-	
-	<!--FIN DE CELDA-->
-</td>
-<td>	
-	<!--COMIENZO DE CELDA-->
-
-	<h3>Update an event</h3>
-	
-	<!--Display all active events-->
-	<form action="" method="POST">
-		<?php
-		//If eventName is not SET, show the form to select one event
-		if (!isset($_POST['eventName'])) {
-		?>
-			<select name="eventName">
+		<form action="" method="POST">
 			<?php
-			$q="SELECT DISTINCT eventName FROM events WHERE eventDate>now()";
-			$r=@mysqli_query($dbc,$q);
-			while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
-				echo "<option value=\"".$row['eventName']."\">".$row['eventName']."</option>";
-			}
+			createSelectDate();
 			?>
-			</select>
-			<input type="submit" name="Check" value="Check" />
-		
-		<?php
+			<br /><br />
+
+			Introduce event name: <br /> 
+
+			<input type="text" name="event" />
+			<br>
+			<input type="submit" name="submit" value="Create" />
+		</form>
+
+	</div>
+	<div id="createU">
+
+		<h3>Update an event</h3>
+
+		<!--Display all active events-->
+		<form action="" method="POST">
+			<?php
+		//If eventName is not SET, show the form to select one event
+			if (!isset($_POST['eventName'])) {
+				?>
+				<select name="eventName">
+					<?php
+					$q="SELECT DISTINCT eventName FROM events WHERE eventDate>now()";
+					$r=@mysqli_query($dbc,$q);
+					while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
+						echo "<option value=\"".$row['eventName']."\">".$row['eventName']."</option>";
+					}
+					?>
+				</select>
+				<br>
+				<input type="submit" name="Check" value="Check" />
+
+				<?php
 		} //If eventDate is not set, select an event date
 		elseif (!isset($_POST['eventDate'])) { ?>
 		
@@ -147,44 +148,41 @@ if ($_POST['submit']=="Create") {
 			<?php echo "<option value=\"".$_POST['eventName']."\">".$_POST['eventName']."</option>"; ?>
 		</select>
 		<select name="eventDate">
-		<?php
-		$q="SELECT eventDate FROM events WHERE eventName=\"".$_POST['eventName']."\"";
-		$r=@mysqli_query($dbc,$q);
-		while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
-			echo "<option value=\"".$row['eventDate']."\">".date("d-m-Y", strtotime($row['eventDate']))."</option>";
-		}
-		?>		
+			<?php
+			$q="SELECT eventDate FROM events WHERE eventName=\"".$_POST['eventName']."\"";
+			$r=@mysqli_query($dbc,$q);
+			while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
+				echo "<option value=\"".$row['eventDate']."\">".date("d-m-Y", strtotime($row['eventDate']))."</option>";
+			}
+			?>		
 		</select>
 		<input type="submit" name="Set" value="Set" />
 		
 		<?php
-		}	
-		
+	}	
+
 		//If eventName and eventDate are set, we proceed to show the form to update DB
-		if (isset($_POST['eventName']) && isset($_POST['eventDate'])) {
-			setcookie("eventName",$_POST['eventName']);
-			setcookie("eventDate",$_POST['eventDate']);
-			$eventName=$_POST['eventName'];
-			$eventDate=$_POST['eventDate'];
-			echo "Updating event ".$eventName." on ".date("d-m-Y", strtotime($eventDate));
-			echo "<br />";
-			createSelectDate ();
-			
-			echo "<br />Introduce new event name: <br />";
-		
-			echo "<input type=\"text\" name=\"event\" />";
-			echo "<input type=\"submit\" name=\"submit\" value=\"Update\" />";
-		
-		}
-		?>
+	if (isset($_POST['eventName']) && isset($_POST['eventDate'])) {
+		setcookie("eventName",$_POST['eventName']);
+		setcookie("eventDate",$_POST['eventDate']);
+		$eventName=$_POST['eventName'];
+		$eventDate=$_POST['eventDate'];
+		echo "Updating event ".$eventName." on ".date("d-m-Y", strtotime($eventDate));
+		echo "<br />";
+		createSelectDate ();
 
+		echo "<br />Introduce new event name: <br />";
 		
-</td> 	<!--FIN DE CELDA-->
+		echo "<input type=\"text\" name=\"event\" />";
+		echo "<input type=\"submit\" name=\"submit\" value=\"Update\" />";
+		
+	}
+	?>
 
-</tr>
-</table>
-	</form>
+
 	
+</form>
+</div
 <?php
 }
 

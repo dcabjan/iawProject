@@ -20,7 +20,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && ($_POST['submit'] == "Go")){
 		$course = $_POST['course'];
 
 		/*make the query to the database to select the fields that the user doesn't fill in*/
-		$qSelect = "SELECT parentName, parentSurname, studentCode FROM emailList WHERE email='" . $email . "'";
+		$qSelect = "SELECT parentName, parentSurname, studentCode, course FROM emailList WHERE email='" . $email . "'";
 		/*run the query*/
 		$rSelect = @mysqli_query ($dbc, $qSelect);
 		$select = mysqli_fetch_array($rSelect, MYSQLI_ASSOC);
@@ -52,7 +52,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && ($_POST['submit'] == "Go")){
 						$error = 2;
 					}
 				}
-			#autofill field if parent surname is empty
+				#autofill field if parent surname is empty
 				else{
 					$psurname = $select['parentSurname'];
 				}

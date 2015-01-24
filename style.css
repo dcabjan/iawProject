@@ -300,3 +300,12 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
 	width: 90%;
 	font-size: 0.6em;
 }
+
+/*create.php*/
+#createN, #createU {
+	background-color: rgba(0,0,0,0.2);
+	padding: 5px;
+	margin: 10px;
+	float: left;
+}
+#createU
