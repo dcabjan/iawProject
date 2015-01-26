@@ -1,9 +1,4 @@
 <!-- File: requireGest.php -->
-<?php
-/*contains button that loads the previous URL in the history list*/
-$back = '<input type="button" class="navoff" id="btnBack" value="Go Back" onClick="window.history.back()" \">';
-?>
-
 <div id="actions">
 	<div id="board">
 		<input type="button" value="INSERT" class="<?php if($subPage == 'insert'){ echo 'navon';}else{echo 'navoff';} ?>" onclick="location.href='insert.php'">

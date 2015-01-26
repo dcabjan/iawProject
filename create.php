@@ -10,7 +10,7 @@ function createSelectDate () {
 	$meses=array(1=>"January","February","March","April","May","June","July","August","September","October","November","December");
 	?>
 	Select event date: <br />
-	<select name="day">
+	<select class='submit' name="day">
 		<option value="" selected="selected" disabled>-</option>
 		<?php
 		for ($i=1;$i<32;$i++) {
@@ -42,30 +42,40 @@ function createSelectDate () {
 //If Create button was pressed, we proceed this way to insert a new event
 if ($_POST['submit']=="Create") {
 	if(!empty($_POST['day']) && !empty($_POST['month']) && !empty($_POST['year']) && !empty($_POST['event'])){
-	$title=$_POST['event'];
-	$day=$_POST['day'];
-	$month=$_POST['month'];
-	$year=$_POST['year'];
-	$date=$year."-".$month."-".$day;
+		$title=$_POST['event'];
+		$day=$_POST['day'];
+		$month=$_POST['month'];
+		$year=$_POST['year'];
+		$date=$year."-".$month."-".$day;
 
-	$q="INSERT INTO `events`(`eventName`, `eventDate`) VALUES (\"$title\",\"$date\")";
-	$ri=@mysqli_query($dbc,$q);
+		$q="INSERT INTO `events`(`eventName`, `eventDate`) VALUES (\"$title\",\"$date\")";
+		$ri=@mysqli_query($dbc,$q);
 
-	if ($ri) {
-		echo "Event created!";
-	} else {
-		echo "An error has occurred. Please, try again later.<br />";
-		echo "If error persists, contact an administrator.";
-	}
-	
-	echo "<br /><br />";
-	echo "<input type=\"button\" value=\"Create more?\" onClick=\"location.href='create.php'\" />";
+		if ($ri) {
+			echo '<div class="createError">';
+			echo "<p>Event created!</p>";
+		} else {
+			echo '<div class="createError">';
+			echo "<p>An error has occurred. Please, try again later.</p><br />";
+			echo "If error persists, contact an administrator.";
+		}
+
+		echo "<br /><br />";
+		echo "<input class='navoff' type=\"button\" value=\"Create new\" onClick=\"location.href='create.php'\" />";
+		echo '<div class="createError">';
 	}
 	else{
-		echo 'You must fill in all the fields';
-		echo "<input type=\"button\" value=\"Go back\" onClick=\"location.href='create.php'\" />";
+		echo '<div class="createError">';
+		echo '<p>ERROR</p>';
+		echo '<p>You must fill in all the fields.</p>';
+		echo $back;
+		echo '<div class="createError">';
 	}
+	?>
 
+</div>
+
+<?php
 //If Update button was pressed, we proceed this way to update an existent event
 } elseif ($_POST['submit']=="Update")  {
 	$title=$_POST['event'];
@@ -88,14 +98,17 @@ if ($_POST['submit']=="Create") {
 	}		
 
 	if ($ru) {
-		echo "Event updated! <br />";
+		echo '<div class="createError">';
+		echo "<p>Event updated!</p><br>";
 	} elseif (!$ru) {
-		echo "An error has occurred. Please, try again later.<br />";
-		echo "If error persists, contact an administrator.";
+		echo '<div class="createError">';
+		echo "<p>An error has occurred. Please, try again later.</p><br />";
+		echo "<p>If error persists, contact an administrator.</p>";
 	}
 	
 	echo "<br /><br />";
-	echo "<input type=\"button\" value=\"Update more?\" onClick=\"location.href='create.php'\" />";
+	echo "<input type=\"button\" class='navoff' value=\"Update another\" onClick=\"location.href='create.php'\" />";
+	echo '</div>';
 	
 
 } else {
@@ -114,7 +127,7 @@ if ($_POST['submit']=="Create") {
 
 			<input type="text" name="event" />
 			<br>
-			<input type="submit" name="submit" value="Create" />
+			<input class='submit' type="submit" name="submit" value="Create" />
 		</form>
 
 	</div>
@@ -128,7 +141,7 @@ if ($_POST['submit']=="Create") {
 		//If eventName is not SET, show the form to select one event
 			if (!isset($_POST['eventName'])) {
 				?>
-				<select name="eventName">
+				<select class="submit" name="eventName">
 					<?php
 					$q="SELECT DISTINCT eventName FROM events WHERE eventDate>now()";
 					$r=@mysqli_query($dbc,$q);
@@ -138,7 +151,7 @@ if ($_POST['submit']=="Create") {
 					?>
 				</select>
 				<br>
-				<input type="submit" name="Check" value="Check" />
+				<input type="submit" class="submit navoff" name="Check" value="Check" />
 
 				<?php
 		} //If eventDate is not set, select an event date
@@ -147,7 +160,7 @@ if ($_POST['submit']=="Create") {
 		<select name="eventName">
 			<?php echo "<option value=\"".$_POST['eventName']."\">".$_POST['eventName']."</option>"; ?>
 		</select>
-		<select name="eventDate">
+		<select class='submit' name="eventDate">
 			<?php
 			$q="SELECT eventDate FROM events WHERE eventName=\"".$_POST['eventName']."\"";
 			$r=@mysqli_query($dbc,$q);
@@ -156,7 +169,8 @@ if ($_POST['submit']=="Create") {
 			}
 			?>		
 		</select>
-		<input type="submit" name="Set" value="Set" />
+		<br>
+		<input type="submit" class="submit navoff" name="Set" value="Set" />
 		
 		<?php
 	}	
@@ -174,7 +188,7 @@ if ($_POST['submit']=="Create") {
 		echo "<br />Introduce new event name: <br />";
 		
 		echo "<input type=\"text\" name=\"event\" />";
-		echo "<input type=\"submit\" name=\"submit\" value=\"Update\" />";
+		echo " <input type=\"submit\" class='submit navoff' name=\"submit\" value=\"Update\" />";
 		
 	}
 	?>

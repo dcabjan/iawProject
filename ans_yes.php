@@ -12,11 +12,16 @@ $eventName=$url[$contador-2];
 $q="UPDATE events SET answerYes=answerYes+1, answerNa=answerNa-1 WHERE eventName='".$eventName."' AND eventDate='".$eventDate."'";
 $r=@mysqli_query($dbc,$q);
 
-if ($r)
+if ($r){
+	echo '<div class="answer">';
 	echo "Your election has been registered. Thank you.";
-else
+	echo '</div>';
+}
+else{
+	echo '<div class="answer">';
 	echo "An error has occurred. Please, try again later.";
-
+	echo '</div>';
+}
 
 //Require footer
 require('./requireFooter.php');

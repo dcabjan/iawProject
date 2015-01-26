@@ -201,15 +201,14 @@ textarea {
 #btnBack {
 	margin-top: 15px;
 }
-#insError {
+#insError, .createError {
 	height: 150px;
 	text-align: center;
 	padding-top: 50px;
 	color: #FF0000;	
 }
-#insError p {
-	text-align: center;
-	
+#insError p, .createError p {
+	text-align: center;	
 	font-weight: bolder;
 }
 #board {
@@ -308,4 +307,18 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
 	margin: 10px;
 	float: left;
 }
-#createU
+#createU {
+	width: 530px;
+}
+#createN {
+	width: 210px;
+}
+
+/*answer_*.php*/
+.answer {
+	text-align: center;
+	padding-top: 50px;
+	color: #000000;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
