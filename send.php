@@ -25,8 +25,8 @@ if (!empty($_POST['title']) && !empty($_POST['message'])) {
 			while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
 				$message=$_POST['message'];
 				$message.="\n\n\n\n\n\nPor favor, confirma si asistirás:\n
-				<a href='http://dcabjan.nfshost.com/iawProject/ans_yes.php?" . urlencode($event) . "?" . urlencode($eventDate) ."'>Asistiré</a>
-				\n<a href='http://dcabjan.nfshost.com/iawProject/ans_no.php?" . urlencode($event) . "?" . urlencode($eventDate) ."'>No asistiré</a>";
+				<a href='http://dcabjan.nfshost.com/cabot/ans_yes.php?" . urlencode($event) . "?" . urlencode($eventDate) ."'>Asistiré</a>
+				\n<a href='http://dcabjan.nfshost.com/cabot/ans_no.php?" . urlencode($event) . "?" . urlencode($eventDate) ."'>No asistiré</a>";
 				$saludo="Estimado/a ".$row['parentName'].",\n\n";
 				$message=$saludo.$message;
 				mail($row['email'], $title, $message); //We send the email
@@ -91,8 +91,8 @@ else{//Else, show the form
 		echo "<input type=\"submit\" name=\"submitSet\" value=\"Select\" />";
 	}
 }
-?>
-if(isset())
+if (empty($_POST['title']) && empty($_POST['message'])){
+	?>
 </div>
 </form>
 <br />
@@ -149,6 +149,7 @@ if(isset())
 </div>
 
 <?php
+}
 }
 else{
 	echo '<div class="answer">';

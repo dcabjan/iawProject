@@ -23,7 +23,7 @@ $back = '<input type="button" class="navoff" id="btnBack" value="Go Back" onClic
 		<div id="header">
 			<?php
 			/*if the session is set show the page content*/
-			if(isset($_SESSION['login'])){
+			if(isset($_SESSION['login']) ){
 				?>
 				<a href="logout.php">LOGOUT</a>
 
