@@ -15,7 +15,7 @@ $q = "UPDATE events SET answerYes = answerYes+1, answerNa = answerNa-1 WHERE eve
 /*execute the query*/
 $r = @mysqli_query($dbc, $q);
 
-/*if the parent clicks yes, execute the query and show a message*/
+/*if the user clicks yes, execute the query and show a message*/
 if ($r){
 	echo '<div class="answer">';
 	echo 'Your election has been registered. Thank you.';

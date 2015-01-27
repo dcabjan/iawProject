@@ -4,7 +4,7 @@ $pageTitle = 'Create Event';
 require('./requireHeader.php');
 require('./requireDB.php');
 
-/*if the session is set show the page content*/
+/*if the user is logged show the page content*/
 if(isset($_SESSION['login'])){
 	/*Function to display a drop down list to select a date (day/month/year)*/
 	function createSelectDate () {
@@ -101,7 +101,7 @@ if(isset($_SESSION['login'])){
 	} elseif (!empty($day)) {
 		$q="UPDATE events SET eventDate='".$date."' WHERE eventName=\"".$eventName."\" AND eventDate=\"".$eventDate."\"";
 		$ru=@mysqli_query($dbc,$q);
-	}		
+	}
 
 	if ($ru) {
 		echo '<div class="createError">';
@@ -126,10 +126,9 @@ else{
 			<?php
 			createSelectDate();
 			?>
+
 			<br><br>
-
-			Introduce event name: <br> 
-
+			Introduce event name: <br>
 			<input type="text" name="event" />
 			<br>
 			<input class='submit' type="submit" name="submit" value="Create" />
@@ -137,14 +136,13 @@ else{
 
 	</div>
 	<div id="createU">
-
 		<h3>Update an event</h3>
 
 		<!--Display all active events-->
 		<form action="" method="POST">
 			
 			<?php
-		//If eventName is not SET, show the form to select one event
+			//If eventName is not SET, show the form to select one event
 			if (!isset($_POST['eventName'])) {
 				?>
 
@@ -164,14 +162,19 @@ else{
 
 				<?php
 			} 
-		//If eventDate is not set, select an event date
+			//If eventDate is not set, select an event date
 			elseif (!isset($_POST['eventDate'])) {
 				?>
 
 				<select name="eventName">
-					<?php echo "<option value=\"".$_POST['eventName']."\">".$_POST['eventName']."</option>"; ?>
+					
+					<?php 
+					echo "<option value=\"".$_POST['eventName']."\">".$_POST['eventName']."</option>";
+					?>
+
 				</select>
 				<select class='submit' name="eventDate">
+					
 					<?php
 					$q="SELECT eventDate FROM events WHERE eventName=\"".$_POST['eventName']."\"";
 					$r=@mysqli_query($dbc,$q);
@@ -185,27 +188,23 @@ else{
 				<input type="submit" class="submit navoff" name="Set" value="Set" />
 
 				<?php
-			}	
-
-		//If eventName and eventDate are set, we proceed to show the form to update DB
+			}
+			//If eventName and eventDate are set, we proceed to show the form to update DB
 			if (isset($_POST['eventName']) && isset($_POST['eventDate'])) {
 				setcookie("eventName",$_POST['eventName']);
 				setcookie("eventDate",$_POST['eventDate']);
 				$eventName=$_POST['eventName'];
 				$eventDate=$_POST['eventDate'];
 				echo "Updating event ".$eventName." on ".date("d-m-Y", strtotime($eventDate));
-				echo "<br />";
+				echo "<br>";
 				createSelectDate ();
 
-				echo "<br />Introduce new event name: <br />";
+				echo "<br>Introduce new event name: <br>";
 
 				echo "<input type=\"text\" name=\"event\" />";
 				echo " <input type=\"submit\" class='submit navoff' name=\"submit\" value=\"Update\" />";
-
 			}
 			?>
-
-
 
 		</form>
 	</div>
@@ -213,14 +212,14 @@ else{
 	<?php
 }
 }
+/*if the user is not logged, show a message and a button that redirects to the login page*/
 else{
 	echo '<div class="answer">';
 	echo 'YOU ARE NOT LOGGED.<br>';
 	echo '<form action="./login.php">';
-    echo '<input class="navoff" type="submit" value="Login">';
+	echo '<input class="navoff" type="submit" value="Login">';
 	echo '</form>';
 	echo '</div>';
 }
-
 require('./requireFooter.php');
 ?>
