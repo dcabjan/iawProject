@@ -25,8 +25,8 @@ if (!empty($_POST['title']) && !empty($_POST['message'])) {
 			while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
 				$message=$_POST['message'];
 				$message.="\n\n\n\n\n\nPor favor, confirma si asistirás:\n
-				<a href='http://dcabjan.nfshost.com/iawProject/ans_yes.php?$event?$eventDate\">Asistiré</a>
-				\n<a href=\"http://dcabjan.nfshost.com/iawProject/ans_no.php?$event?$eventDate\"'>No asistiré</a>";
+				<a href='http://dcabjan.nfshost.com/iawProject/ans_yes.php?" . urlencode($event) . "?" . urlencode($eventDate) ."'>Asistiré</a>
+				\n<a href='http://dcabjan.nfshost.com/iawProject/ans_no.php?" . urlencode($event) . "?" . urlencode($eventDate) ."'>No asistiré</a>";
 				$saludo="Estimado/a ".$row['parentName'].",\n\n";
 				$message=$saludo.$message;
 				mail($row['email'], $title, $message); //We send the email
@@ -42,6 +42,8 @@ if (!empty($_POST['title']) && !empty($_POST['message'])) {
 			echo "An error has ocurred. Please, try again later.<br />";
 			echo "If the error persists, contact an administrator.";
 		}
+		unset($_COOKIE['eventName']);
+		unset($_COOKIE['eventDate']);
 	}
 }
 else{//Else, show the form
@@ -90,6 +92,7 @@ else{//Else, show the form
 	}
 }
 ?>
+if(isset())
 </div>
 </form>
 <br />
