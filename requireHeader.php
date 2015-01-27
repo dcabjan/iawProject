@@ -2,11 +2,6 @@
 <?php 
 session_start();
 
-if (!isset($_SESSION['login'])) {
-	
-	header ("Location: http://dcabjan.nfshost.com/iawProject/login.php");
-}
-
 /*contains button that loads the previous URL in the history list*/
 $back = '<input type="button" class="navoff" id="btnBack" value="Go Back" onClick="window.history.back()" \">';
 ?>
@@ -27,7 +22,8 @@ $back = '<input type="button" class="navoff" id="btnBack" value="Go Back" onClic
 
 		<div id="header">
 		<?php
-		if(($pageTitle != 'ans_yes.php') && (!$pageTitle != 'ans_no.php')){
+		/*if the session is set show the page content*/
+if(isset($_SESSION['login'])){
 ?>
 			<a href="logout.php">LOGOUT</a>
 

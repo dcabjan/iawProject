@@ -5,6 +5,8 @@ $pageTitle = 'Event Sender';
 require('./requireHeader.php');
 require('./requireDB.php');
 
+/*if the session is set show the page content*/
+if(isset($_SESSION['login'])){
 //If title and message is set, send email
 if (!empty($_POST['title']) && !empty($_POST['message'])) {
 
@@ -140,6 +142,15 @@ else{//Else, show the form
 </div>
 
 <?php
+}
+else{
+	echo '<div class="answer">';
+	echo 'YOU ARE NOT LOGGED.<br>';
+	echo '<form action="./login.php">';
+    echo '<input class="navoff" type="submit" value="Login">';
+	echo '</form>';
+	echo '</div>';
+}
 
 /*Require footer*/
 require('./requireFooter.php');

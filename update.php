@@ -4,6 +4,9 @@ $pageTitle = 'Manage Lists';
 $subPage = 'update';
 require('./requireHeader.php');
 require('./requireDB.php');
+
+/*if the session is set show the page content*/
+if(isset($_SESSION['login'])){
 require('./requireGest.php');
 
 /*do this if the form is send*/
@@ -173,6 +176,15 @@ else{
 	<?php
 }
 require('./requireEmails.php');
+}
+else{
+	echo '<div class="answer">';
+	echo 'YOU ARE NOT LOGGED.<br>';
+	echo '<form action="./login.php">';
+    echo '<input class="navoff" type="submit" value="Login">';
+	echo '</form>';
+	echo '</div>';
+}
 require('./requireFooter.php');
 ?>
 
