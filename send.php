@@ -13,8 +13,8 @@ if (!empty($_POST['title']) && !empty($_POST['message'])) {
 	if ($_POST['submit']=="Send") {
 		
 		$title = $_POST['title'];
-		$event = $_POST['eventName'];
-		$eventDate = $_POST['eventDate'];
+		$event = $_COOKIE['eventName'];
+		$eventDate = $_COOKIE['eventDate'];
 
 		$q = "SELECT parentName,email FROM emailList";
 		$r = @mysqli_query($dbc,$q);
@@ -25,8 +25,8 @@ if (!empty($_POST['title']) && !empty($_POST['message'])) {
 			while ($row=mysqli_fetch_array($r,MYSQLI_ASSOC)) {
 				$message=$_POST['message'];
 				$message.="\n\n\n\n\n\nPor favor, confirma si asistirás:\n
-				<a href=\"http://dcabjan.nfshost.com/iawProject/ans_yes.php?$event?$eventDate\">Asistiré</a>
-				\n<a href=\"http://dcabjan.nfshost.com/iawProject/ans_no.php?$event?$eventDate\">No asistiré</a>";
+				<a href='http://dcabjan.nfshost.com/iawProject/ans_yes.php?$event?$eventDate\">Asistiré</a>
+				\n<a href=\"http://dcabjan.nfshost.com/iawProject/ans_no.php?$event?$eventDate\"'>No asistiré</a>";
 				$saludo="Estimado/a ".$row['parentName'].",\n\n";
 				$message=$saludo.$message;
 				mail($row['email'], $title, $message); //We send the email
@@ -71,7 +71,7 @@ else{//Else, show the form
 		if (!isset($_POST['eventName'])){
 			echo "&nbsp<input type=\"submit\" name=\"submitCheck\" value=\"Show dates\" />";
 		}
-		if (($_POST['submitSet'] == 'Show') || ($_POST['submitCheck'] != 'Select')){
+		else if (($_POST['submitSet'] == 'Show') || ($_POST['submitCheck'] != 'Select')){
 			echo "<div id='butDate'><br><br>Select the date: <select name=\"eventDate\">";
 			$q = "SELECT eventDate FROM events WHERE eventName='".$_POST['eventName']."'";
 			$r = @mysqli_query($dbc,$q);
@@ -85,7 +85,7 @@ else{//Else, show the form
 
 	</select>
 	<?php		
-	if (!isset($_POST['eventDate']) && isset($_POST['eventName'])){
+	if (isset($_POST['eventName']) && !(isset($_POST['eventDate']))){
 		echo "<input type=\"submit\" name=\"submitSet\" value=\"Select\" />";
 	}
 }
@@ -115,7 +115,11 @@ else{//Else, show the form
 			$date=$_POST['eventDate'];
 			$newDate=date("d-m-Y", strtotime($date));
 			echo "<option value=\"".$_POST['eventDate']."\">".$newDate."</option>";	
-			echo "</select>";	
+			echo "</select>";
+
+			$_COOKIE['eventName'] = $_POST['eventName'];
+			$_COOKIE['eventDate'] = $_POST['eventDate'];
+				
 		}
 
 		?>
