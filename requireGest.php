@@ -1,4 +1,5 @@
 <!-- File: requireGest.php -->
+<!-- shows the buttons to load each different form -->
 <div id="actions">
 	<div id="board">
 		<input type="button" value="INSERT" class="<?php if($subPage == 'insert'){ echo 'navon';}else{echo 'navoff';} ?>" onclick="location.href='insert.php'">

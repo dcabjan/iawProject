@@ -22,19 +22,19 @@ if(isset($_SESSION['login'])){
 			$scode = $_POST['scode'];
 			$course = $_POST['course'];
 
-	#check if all the fields are filled in
+			#check if all the fields are filled in
 			if(!empty($email) && !empty($pname) && !empty($psurname) && !empty($scode) && !empty($course)){
 
-		#check if the email is a valid email
+				#check if the email is a valid email
 				if(filter_var($email, FILTER_VALIDATE_EMAIL)){
 
-			#check if the parent name field only contains letters and spaces
+					#check if the parent name field only contains letters and spaces
 					if(ctype_alpha(str_replace(' ', '', $pname))){
 
-				#check if the parent surname field only contains letters and spaces
+						#check if the parent surname field only contains letters and spaces
 						if(ctype_alpha(str_replace(' ', '', $psurname))){
 
-					#check if the student code field only contains numbers
+							#check if the student code field only contains numbers
 							if(ctype_digit($scode)){
 
 								/*count the number of rows before executing the query*/
@@ -62,7 +62,7 @@ if(isset($_SESSION['login'])){
 									echo '<input type="button" class="navoff submit" value="Try again" onclick="history.back()">';
 								}
 							}
-						#error if the student code field is not valid
+							#error if the student code field is not valid
 							else{
 								echo '<p>ERROR</p>';
 								echo '<p>The student code you entered is not valid. Only numbers are allowed.</p>';
@@ -70,31 +70,28 @@ if(isset($_SESSION['login'])){
 							}
 
 						}
-					#error if the parent surname field is not valid
+						#error if the parent surname field is not valid
 						else{
 							echo '<p>ERROR</p>';
 							echo '<p>The parent surname you entered is not valid. Only letters and spaces are allowed</p>';
 							echo $back;
 						}
-
 					}
-				#error if the parent name field is not valid
+					#error if the parent name field is not valid
 					else{
 						echo '<p>ERROR</p>';
 						echo '<p>The parent name you entered is not valid. Only letters and spaces are allowed</p>';
 						echo $back;
 					}
-
 				}
-			#error if the email field is not valid
+				#error if the email field is not valid
 				else{
 					echo '<p>ERROR</p>';
 					echo '<p>The email address you entered is not valid.</p>';
 					echo $back;
 				}
-
 			}
-		#error if any field is empty
+			#error if any field is empty
 			else{
 				echo '<p>ERROR</p>';
 				echo '<p>You must fill in all the fields.</p>';
@@ -141,13 +138,14 @@ if(isset($_SESSION['login'])){
 
 		<?php
 	}
-require('./requireEmails.php');
+	require('./requireEmails.php');
 }
+/*if the user is not logged then show an error message and a button to the login page*/
 else{
 	echo '<div class="answer">';
 	echo 'YOU ARE NOT LOGGED.<br>';
 	echo '<form action="./login.php">';
-    echo '<input class="navoff" type="submit" value="Login">';
+	echo '<input class="navoff" type="submit" value="Login">';
 	echo '</form>';
 	echo '</div>';
 }

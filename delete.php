@@ -5,7 +5,7 @@ $subPage = 'delete';
 require('./requireHeader.php');
 require('./requireDB.php');
 
-/*if the user is logged show the page content*/
+/*if the user is logged then show the page content*/
 if(isset($_SESSION['login'])){
 	require('./requireGest.php');
 
@@ -56,7 +56,7 @@ if(isset($_SESSION['login'])){
 					echo $back;
 				}
 			}
-		#error if the email address field is empty
+			#error if the email address field is empty
 			else{
 				echo '<p>ERROR</p>';
 				echo '<p>You must fill in the email address field.</p>';
@@ -71,6 +71,7 @@ if(isset($_SESSION['login'])){
 	/*do this if the form is not send*/
 	else{
 		?>
+
 		<div id="gestForm">
 			<!-- show the form -->
 			<form action="" method="POST">
@@ -85,6 +86,7 @@ if(isset($_SESSION['login'])){
 				</div>
 			</form>
 		</div>
+		
 		<?php
 	}
 	?>
@@ -92,6 +94,7 @@ if(isset($_SESSION['login'])){
 	<?php
 	require('./requireEmails.php');
 }
+#if the user is not logged in then show an error message and a button to go to the login page
 else{
 	echo '<div class="answer">';
 	echo 'YOU ARE NOT LOGGED.<br>';

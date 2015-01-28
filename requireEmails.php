@@ -26,14 +26,15 @@ if (($_SERVER['REQUEST_METHOD'] == "POST") && ($_POST['submit'] == "Filter")){
 		$qEmail = "SELECT email, parentName, parentSurname, studentCode, course FROM emailList WHERE course='" . $_POST['course'] . "'";
 	}
 }
+/*if no filter is selected make the query to show all registers*/
 else
 {
 	$qEmail = "SELECT email, parentName, parentSurname, studentCode, course FROM emailList";
 }
-
 /*run the query*/
 $rEmail = @mysqli_query ($dbc, $qEmail);
 ?>
+
 <!-- displays the email registers -->
 <div id="list">
 
