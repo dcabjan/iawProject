@@ -9,6 +9,7 @@ $url = explode('?', $url);
 $contador = count($url);
 $eventDate = $url[$contador-1];
 $eventName = $url[$contador-2];
+$eventName = rawurldecode("$eventName");
 
 /*create query to update the value 'yes' in the event table*/
 $q = "UPDATE events SET answerNo = answerNo+1, answerNa = answerNa-1 WHERE eventName = '".$eventName."' AND eventDate='".$eventDate."'";
