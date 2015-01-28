@@ -114,6 +114,9 @@ if(isset($_SESSION['login'])){
 	echo "<br><br>";
 	echo "<input type=\"button\" class='navoff' value=\"Update another\" onClick=\"location.href='create.php'\" />";
 	echo '</div>';
+
+	setcookie("eventName", "", time()-3600);
+	setcookie("eventName", "", time()-3600);
 }
 else{
 	?>
